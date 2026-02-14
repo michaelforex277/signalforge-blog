@@ -1,14 +1,13 @@
 baseURL = "https://blog.signal-forge.app/"
 languageCode = "en-us"
 title = "SignalForge Engineering Notes"
-theme = "PaperMod"
 
 [module]
   [[module.imports]]
     path = "github.com/adityatelange/hugo-PaperMod"
 
-
 enableRobotsTXT = true
+
 
 [pagination]
   pagerSize = 10
