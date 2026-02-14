@@ -1,0 +1,44 @@
+baseURL = "https://blog.signal-forge.app/"
+languageCode = "en-us"
+title = "SignalForge Engineering Notes"
+theme = "PaperMod"
+
+[module]
+  [[module.imports]]
+    path = "github.com/adityatelange/hugo-PaperMod"
+
+
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  description = "Deterministic spectral analysis (PSD/STFT), tonal & harmonic characterization, and automated filter synthesis with engineering-grade verification."
+  author = "SignalForge"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = true
+  mainSections = ["posts"]
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "Try SignalForge"
+    url = "https://signal-forge.app/"
+    weight = 3
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
