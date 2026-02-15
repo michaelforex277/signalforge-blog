@@ -42,7 +42,7 @@ A robust DSP pipeline must begin with correct spectral characterization, proceed
 This limitation becomes critical when filters are generated without explicit engineering constraints and quantitative verification.
 A deeper engineering perspective is discussed in:
 For a constraint-driven engineering framework, see:
-https://blog.signal-forge.app/constraint-driven-dsp-filter-design/
+https://blog.signal-forge.app/posts/constraint-driven-dsp-filter-design/
 
 
 ---
@@ -83,7 +83,7 @@ This transforms spectral inspection into structured engineering data.
 Deterministic detection is most effective when combined with constraint-driven synthesis and auditable performance verification.
 See the full engineering workflow here:
 For a constraint-driven engineering framework, see:
-https://blog.signal-forge.app/constraint-driven-dsp-filter-design/
+https://blog.signal-forge.app/posts/constraint-driven-dsp-filter-design/
 
 
 ---
