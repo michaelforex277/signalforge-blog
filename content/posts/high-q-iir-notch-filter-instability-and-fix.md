@@ -1,5 +1,5 @@
 ---
-title: "Why High-Q IIR Notch Filters Become Unstable (And How to Fix It)"
+title: "Why High-Q IIR Notch Filters Become Unstable in Real DSP sysytems (And How to Fix It)"
 date: 2026-02-15
 tags: ["IIR notch filter", "high Q instability", "DSP stability", "filter coefficients", "numerical precision", "SignalForge"]
 description: "High-Q IIR notch filters often become numerically unstable in real-world DSP systems. This article explains why instability happens and how deterministic coefficient synthesis prevents it."
@@ -34,7 +34,7 @@ While mathematically stable in theory, practical floating-point and fixed-point 
 
 ---
 
-## Root Cause: Poles Approaching the Unit Circle
+## Root Cause of IIR Notch Filter Instability: Poles Approaching the Unit Circle
 
 In IIR notch structures:
 
@@ -54,7 +54,7 @@ This results in:
 
 ---
 
-## Quantization and Implementation Sensitivity
+## Coefficient Quantization and Numerical Precision Effects in High-Q IIR Filters
 
 Real systems rarely use infinite precision:
 
@@ -65,6 +65,8 @@ Real systems rarely use infinite precision:
 High-Q filters magnify these effects dramatically.
 
 A design that is mathematically stable can become unstable after quantization.
+
+Many engineers encounter this behavior when searching for issues like “IIR notch filter ringing,” “unstable digital notch filter,” or “high Q filter oscillation.” Although frequency response plots may appear correct in design tools, small numerical errors in pole placement caused by finite precision arithmetic can shift poles outside safe stability margins, producing unexpected oscillations in real implementations.
 
 ---
 
@@ -100,7 +102,7 @@ SignalForge applies these guardrails automatically, preventing pathological coef
 
 ---
 
-## Verification Beyond Visual Frequency Response
+## How to Test IIR Notch Filter Stability Beyond Frequency Response Plots
 
 Stable design should be verified through:
 

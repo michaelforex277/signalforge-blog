@@ -15,7 +15,7 @@ This article presents a **deterministic and auditable workflow** for spectral ch
 
 ---
 
-## Why DSP Filtering Fails in Practice
+## Why DSP-Based Filtering often Fails on Real Noise Signals
 
 Most real-world filtering failures are not caused by filter structures themselves, but by incorrect spectral identification and non-repeatable tuning.
 
@@ -31,7 +31,9 @@ A robust DSP pipeline must begin with correct spectral characterization, proceed
 
 ---
 
-## PSD and STFT: Complementary Analysis Tools
+## PSD and STFT for Tonal Noise Detection in Real Signals
+
+In many practical measurement systems, engineers frequently search for problems such as “why PSD peaks keep moving,” “false tonal detection in noisy signals,” or “how to detect drifting narrowband interference.” These issues arise because stationary spectral methods assume fixed-frequency behavior, while real interference often drifts, appears intermittently, or is masked by broadband noise. Combining PSD stability with STFT temporal resolution allows engineers to reliably separate true tonal components from spectral artifacts.
 
 ### Power Spectral Density (PSD)
 
@@ -51,7 +53,7 @@ Engineering-grade workflows combine PSD stability with STFT dynamics.
 
 ---
 
-## Deterministic Tonal and Harmonic Characterization
+## How to Detect Narrowband Interference and Harmonics in Noisy Signals
 
 Rather than subjective tuning, deterministic characterization explicitly extracts:
 
@@ -63,6 +65,8 @@ Rather than subjective tuning, deterministic characterization explicitly extract
 This transforms spectral inspection into structured engineering data.
 
 ---
+
+## Real-World Example: Removing Drifting Narrowband Interference from a Noisy Signal
 
 ## Example: One Real Signal → Analysis, Design, and Deployable Output
 
