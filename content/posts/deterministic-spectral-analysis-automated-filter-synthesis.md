@@ -13,6 +13,16 @@ Typical workflows rely on manual spectrum inspection and heuristic tuning: visua
 
 This article presents a **deterministic and auditable workflow** for spectral characterization and automated filter synthesis—focused on engineering repeatability rather than black-box optimization—and explains how SignalForge structures that pipeline end-to-end.
 
+Problem Summary — Engineers frequently ask:
+
+• Why do PSD peaks move between measurements?
+• How can drifting narrowband interference be detected reliably?
+• Why does tonal noise disappear in averaged spectra but reappear in time data?
+• How can false tonal detection caused by noise ripple be avoided?
+• What is the best way to separate real interference from spectral artifacts?
+
+This article addresses these real-world DSP problems using deterministic PSD and STFT-based analysis combined with automated, verifiable filter synthesis.
+
 ---
 
 ## Why DSP-Based Filtering often Fails on Real Noise Signals

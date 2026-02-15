@@ -18,6 +18,16 @@ Symptoms include:
 
 This article explains the physical and numerical reasons behind high-Q notch instability and outlines deterministic design practices that prevent it.
 
+Problem Summary — Engineers frequently ask:
+
+• Why does a digital notch filter start ringing after deployment?
+• Why does a mathematically stable IIR notch become unstable in practice?
+• How does coefficient quantization affect high-Q IIR filters?
+• Why do narrow notches amplify noise instead of suppressing it?
+• How can I test notch filter stability beyond frequency response plots?
+
+This article explains the numerical root causes of high-Q IIR instability and presents deterministic design practices for robust real-world implementations.
+
 ---
 
 ## What High-Q Actually Means in Practice
