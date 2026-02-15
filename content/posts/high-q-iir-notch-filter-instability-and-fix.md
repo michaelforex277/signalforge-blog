@@ -60,7 +60,13 @@ This results in:
 
 - ringing  
 - long transient decay  
-- outright instability  
+- outright instability 
+
+This numerical fragility is one reason why sharp filter designs must operate under explicit engineering constraints rather than blind optimization.
+A constraint-driven design framework is described in:
+For a constraint-driven engineering framework, see:
+https://blog.signal-forge.app/constraint-driven-dsp-filter-design/
+
 
 ---
 
@@ -123,6 +129,12 @@ Stable design should be verified through:
 
 This ensures long-term stability under real signal conditions.
 
+Quantitative verification under real-world constraints is essential for reliable deployment.
+See how constraint-driven DSP workflows formalize this process:
+For a constraint-driven engineering framework, see:
+https://blog.signal-forge.app/constraint-driven-dsp-filter-design/
+
+
 ---
 
 ## Engineering Takeaway
@@ -135,3 +147,13 @@ By enforcing deterministic synthesis constraints and quantitative stability chec
 
 ---
 
+Related Engineering Articles
+
+Deterministic Spectral Analysis
+https://blog.signal-forge.app/deterministic-spectral-analysis-and-automated-filter-synthesis/
+
+High-Q IIR Notch Instability
+https://blog.signal-forge.app/high-q-iir-notch-filters-become-unstable/
+
+Constraint-Driven DSP Design
+https://blog.signal-forge.app/constraint-driven-dsp-filter-design/

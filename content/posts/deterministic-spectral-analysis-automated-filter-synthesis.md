@@ -39,6 +39,12 @@ Common failure modes include:
 
 A robust DSP pipeline must begin with correct spectral characterization, proceed to stable synthesis, and finish with objective performance validation.
 
+This limitation becomes critical when filters are generated without explicit engineering constraints and quantitative verification.
+A deeper engineering perspective is discussed in:
+For a constraint-driven engineering framework, see:
+https://blog.signal-forge.app/constraint-driven-dsp-filter-design/
+
+
 ---
 
 ## PSD and STFT for Tonal Noise Detection in Real Signals
@@ -73,6 +79,12 @@ Rather than subjective tuning, deterministic characterization explicitly extract
 - harmonic relationships  
 
 This transforms spectral inspection into structured engineering data.
+
+Deterministic detection is most effective when combined with constraint-driven synthesis and auditable performance verification.
+See the full engineering workflow here:
+For a constraint-driven engineering framework, see:
+https://blog.signal-forge.app/constraint-driven-dsp-filter-design/
+
 
 ---
 
@@ -109,3 +121,14 @@ static const float g_filter_iir_sos[FILTER_IIR_NUM_SECTIONS][6] =
 {
     { 0.99869781f, -1.99128631f, 0.99869781f, 1.00000000f, -1.99128631f, 0.99739563f }
 };
+
+Related Engineering Articles
+
+Deterministic Spectral Analysis
+https://blog.signal-forge.app/deterministic-spectral-analysis-and-automated-filter-synthesis/
+
+High-Q IIR Notch Instability
+https://blog.signal-forge.app/high-q-iir-notch-filters-become-unstable/
+
+Constraint-Driven DSP Design
+https://blog.signal-forge.app/constraint-driven-dsp-filter-design/
