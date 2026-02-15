@@ -77,6 +77,43 @@ Consider a signal containing:
 - multiple harmonic spurs  
 - low-level broadband noise  
 
+## Example: One Real Signal → Analysis, Design, and Deployable Output
+
+Below is a real SignalForge run (one of the demo cases shown on the product site).  
+It includes the exact artifacts engineers usually need for review and firmware handoff: **analysis plots**, **before/after verification**, and **deployable C coefficients**.
+
+### 1) Detected tonals and stability diagnostics (PSD/STFT-derived signals)
+
+![Detected tonals and STFT noise-floor diagnostics produced by SignalForge](/cases/example-b/tonal_debug.png)
+
+*Figure 1 — Tonal peak detection and STFT-derived noise-floor diagnostics. This is the “what exactly is the interferer?” step that prevents guessing and false notches.*
+
+### 2) Before/after verification (objective spectral result)
+
+![Before and after PSD comparison showing tonal suppression after filtering](/cases/example-b/before_after_psd.png)
+
+*Figure 2 — Before/After PSD. The goal is not “looks cleaner,” but measurable tonal suppression with minimal collateral damage.*
+
+### 3) Deployable output (C header)
+
+You can download the generated coefficient header here:
+
+- **C header (filter coefficients):** [/cases/example-a/filter_coeffs.h](/cases/example-b/filter_coeffs.h)
+
+If you prefer a quick glance, here is a short excerpt (truncated):
+
+```c
+#define FILTER_FS_HZ              (48000.00000000f)
+#define FILTER_IIR_NUM_SECTIONS   (1u)
+#define FILTER_FIR_NUM_TAPS       (101u)
+
+/* IIR notch cascade coefficients (SOS) */
+static const float g_filter_iir_sos[FILTER_IIR_NUM_SECTIONS][6] =
+{
+    { 0.99869781f, -1.99128631f, 0.99869781f, 1.00000000f, -1.99128631f, 0.99739563f }
+};
+
+
 ### Raw Spectral Signature
 
 *(Insert PSD plot showing dominant tone + harmonics here)*  
