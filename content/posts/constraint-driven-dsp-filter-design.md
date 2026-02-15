@@ -158,13 +158,3 @@ This approach replaces trial-and-error with repeatable, defensible engineering o
 
 ---
 
-Related Engineering Articles
-
-Deterministic Spectral Analysis
-https://blog.signal-forge.app/deterministic-spectral-analysis-and-automated-filter-synthesis/
-
-High-Q IIR Notch Instability
-https://blog.signal-forge.app/high-q-iir-notch-filters-become-unstable/
-
-Constraint-Driven DSP Design
-https://blog.signal-forge.app/constraint-driven-dsp-filter-design/

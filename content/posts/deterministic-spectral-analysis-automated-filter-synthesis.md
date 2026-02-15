@@ -122,13 +122,3 @@ static const float g_filter_iir_sos[FILTER_IIR_NUM_SECTIONS][6] =
     { 0.99869781f, -1.99128631f, 0.99869781f, 1.00000000f, -1.99128631f, 0.99739563f }
 };
 
-Related Engineering Articles
-
-Deterministic Spectral Analysis
-https://blog.signal-forge.app/deterministic-spectral-analysis-and-automated-filter-synthesis/
-
-High-Q IIR Notch Instability
-https://blog.signal-forge.app/high-q-iir-notch-filters-become-unstable/
-
-Constraint-Driven DSP Design
-https://blog.signal-forge.app/constraint-driven-dsp-filter-design/
