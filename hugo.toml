@@ -25,6 +25,13 @@ enableRobotsTXT = true
   TocOpen = true
   mainSections = ["posts"]
 
+[params.assets]
+  favicon = "/audio-wave.png"
+  favicon16x16 = "/audio-wave.png"
+  favicon32x32 = "/audio-wave.png"
+  apple_touch_icon = "/audio-wave.png"
+
+
 [menu]
   [[menu.main]]
     name = "Posts"
