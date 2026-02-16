@@ -1,9 +1,5 @@
 
----
 
-# 📄 high-q-iir-notch-filter-instability-and-fix.md 
-
-```md
 ---
 title: "Why High-Q IIR Notch Filters Become Unstable in Real DSP Systems (And How to Fix It)"
 date: 2026-02-15
