@@ -13,19 +13,21 @@ Typical workflows rely on manual spectrum inspection and heuristic tuning: visua
 
 This article presents a **deterministic and auditable workflow** for spectral characterization and automated filter synthesis—focused on engineering repeatability rather than black-box optimization—and explains how SignalForge structures that pipeline end-to-end.
 
-Problem Summary — Engineers frequently ask:
+### Problem Summary (FAQ)
 
-• Why do PSD peaks move between measurements?
-• How can drifting narrowband interference be detected reliably?
-• Why does tonal noise disappear in averaged spectra but reappear in time data?
-• How can false tonal detection caused by noise ripple be avoided?
-• What is the best way to separate real interference from spectral artifacts?
+Engineers frequently ask:
 
-This article addresses these real-world DSP problems using deterministic PSD and STFT-based analysis combined with automated, verifiable filter synthesis.
+- Why do PSD peaks move between measurements?
+- How can drifting narrowband interference be detected reliably?
+- Why does tonal noise disappear in averaged spectra but reappear in time data?
+- How can false tonal detection caused by noise ripple be avoided?
+- What is the best way to separate real interference from spectral artifacts?
+
+This article addresses these problems using deterministic PSD and STFT-based analysis combined with auditable filter synthesis.
 
 ---
 
-## Why DSP-Based Filtering often Fails on Real Noise Signals
+## Why DSP-Based Filtering Often Fails on Real Noisy Signals
 
 Most real-world filtering failures are not caused by filter structures themselves, but by incorrect spectral identification and non-repeatable tuning.
 
@@ -40,16 +42,19 @@ Common failure modes include:
 A robust DSP pipeline must begin with correct spectral characterization, proceed to stable synthesis, and finish with objective performance validation.
 
 This limitation becomes critical when filters are generated without explicit engineering constraints and quantitative verification.
-A deeper engineering perspective is discussed in:
-For a constraint-driven engineering framework, see:
-https://blog.signal-forge.app/posts/constraint-driven-dsp-filter-design/
 
+For a constraint-driven engineering framework, see:  
+[Constraint-Driven DSP Filter Design](/constraint-driven-dsp-filter-design/)
 
 ---
 
 ## PSD and STFT for Tonal Noise Detection in Real Signals
 
-In many practical measurement systems, engineers frequently search for problems such as “why PSD peaks keep moving,” “false tonal detection in noisy signals,” or “how to detect drifting narrowband interference.” These issues arise because stationary spectral methods assume fixed-frequency behavior, while real interference often drifts, appears intermittently, or is masked by broadband noise. Combining PSD stability with STFT temporal resolution allows engineers to reliably separate true tonal components from spectral artifacts.
+In many practical measurement systems, engineers frequently search for problems such as “why PSD peaks keep moving,” “false tonal detection in noisy signals,” or “how to detect drifting narrowband interference.”
+
+These issues arise because stationary spectral methods assume fixed-frequency behavior, while real interference often drifts, appears intermittently, or is masked by broadband noise.
+
+Combining PSD stability with STFT temporal resolution allows engineers to reliably separate true tonal components from spectral artifacts.
 
 ### Power Spectral Density (PSD)
 
@@ -81,16 +86,13 @@ Rather than subjective tuning, deterministic characterization explicitly extract
 This transforms spectral inspection into structured engineering data.
 
 Deterministic detection is most effective when combined with constraint-driven synthesis and auditable performance verification.
-See the full engineering workflow here:
-For a constraint-driven engineering framework, see:
-https://blog.signal-forge.app/posts/constraint-driven-dsp-filter-design/
 
+For a complete engineering framework, see:  
+[Constraint-Driven DSP Filter Design](/constraint-driven-dsp-filter-design/)
 
 ---
 
-## Real-World Example: Removing Drifting Narrowband Interference from a Noisy Signal
-
-## Example: One Real Signal → Analysis, Design, and Deployable Output
+## Example: One Real Signal — Analysis, Design, and Deployable Output
 
 Below is a real SignalForge processing run showing the full deterministic pipeline—from detection to verification to firmware-ready output.
 
@@ -108,9 +110,8 @@ Below is a real SignalForge processing run showing the full deterministic pipeli
 
 ### 3) Deployable C coefficient output
 
-- **Download filter coefficients (C header):** [/cases/example-b/filter_coeffs.h](/cases/example-b/filter_coeffs.h)
-
-Excerpt:
+**Download filter coefficients (C header):**  
+[/cases/example-b/filter_coeffs.h](/cases/example-b/filter_coeffs.h)
 
 ```c
 #define FILTER_FS_HZ              (48000.00000000f)
@@ -121,4 +122,3 @@ static const float g_filter_iir_sos[FILTER_IIR_NUM_SECTIONS][6] =
 {
     { 0.99869781f, -1.99128631f, 0.99869781f, 1.00000000f, -1.99128631f, 0.99739563f }
 };
-
