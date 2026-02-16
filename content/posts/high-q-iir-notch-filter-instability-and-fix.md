@@ -69,7 +69,7 @@ This results in:
 This numerical fragility is one reason sharp filter designs must operate under explicit engineering constraints.
 
 For a constraint-driven framework, see:  
-[Constraint-Driven DSP Filter Design](/constraint-driven-dsp-filter-design/)
+[Constraint-Driven DSP Filter Design](https://blog.signal-forge.app/content/posts/constraint-driven-dsp-filter-design/)
 
 ---
 
@@ -131,7 +131,7 @@ Stable design should be verified through:
 Quantitative verification under real-world constraints is essential for reliable deployment.
 
 For a formal engineering workflow, see:  
-[Constraint-Driven DSP Filter Design](/constraint-driven-dsp-filter-design/)
+[Constraint-Driven DSP Filter Design](https://blog.signal-forge.app/content/posts/constraint-driven-dsp-filter-design/)
 
 ---
 
