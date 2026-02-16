@@ -3,6 +3,7 @@ title: "Deterministic Spectral Analysis and Automated Filter Synthesis for Engin
 date: 2026-02-14
 tags: ["spectral analysis", "PSD", "STFT", "tonal noise", "harmonic interference", "notch filter", "IIR", "FIR", "DSP verification", "SignalForge"]
 description: "A deterministic, engineering-grade workflow for PSD/STFT-based tonal & harmonic detection, stable IIR/FIR synthesis, and quantitative verification—exporting deployable coefficients and auditable reports."
+slug: "deterministic-spectral-analysis-automated-filter-synthesis"
 ---
 
 ## Introduction
@@ -12,6 +13,8 @@ In real-world DSP systems—embedded sensing, instrumentation, audio processing,
 Typical workflows rely on manual spectrum inspection and heuristic tuning: visually identifying peaks, guessing problematic frequencies, and iteratively adjusting filters until the output “looks cleaner.” While workable for simple stationary tones, this approach becomes unreliable when interference drifts over time, appears intermittently, or overlaps with broadband noise.
 
 This article presents a **deterministic and auditable workflow** for spectral characterization and automated filter synthesis—focused on engineering repeatability rather than black-box optimization—and explains how SignalForge structures that pipeline end-to-end.
+
+**Deterministic in this context means that given identical input signals and configuration parameters, the pipeline produces identical tonal detection results, filter coefficients, and quantitative verification metrics—without stochastic tuning or heuristic adjustment.**
 
 ### Problem Summary (FAQ)
 
@@ -33,7 +36,7 @@ Most real-world filtering failures are not caused by filter structures themselve
 
 Common failure modes include:
 
-- false tonal detection caused by PSD ripple noise  
+- false tonal detection caused by **PSD estimator variance (e.g., Welch ripple floor)**  
 - missed interference due to frequency drift  
 - unstable high-Q notch placement  
 - excessive signal distortion  
@@ -102,7 +105,7 @@ Below is a real SignalForge processing run showing the full deterministic pipeli
 
 *Figure 1 — PSD/STFT-based tonal peak detection with stability diagnostics preventing false notches.*
 
-### 2) Quantitative before/after verification
+### 2) Quantquantitative before/after verification
 
 ![Before and after PSD comparison showing tonal suppression after filtering](/cases/example-b/before_after_psd.png)
 
