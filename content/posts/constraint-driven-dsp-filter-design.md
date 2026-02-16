@@ -1,6 +1,6 @@
 ---
 title: "Constraint-Driven DSP Filter Design: From Trial-and-Error to Auditable Engineering Decisions"
-date: 2026-02-15
+date: 2026-02-14
 tags: ["DSP filter design", "engineering constraints", "notch filter", "FIR", "IIR stability", "DSP verification", "SignalForge"]
 description: "Why automated filtering fails without explicit engineering constraints, numerical stability guardrails, and quantitative verification."
 slug: "constraint-driven-dsp-filter-design"
