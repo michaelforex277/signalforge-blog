@@ -49,7 +49,7 @@ While mathematically appealing, these approaches often ignore engineering realit
 A filter that looks perfect in simulation can fail catastrophically in embedded or real-time systems.
 
 For a detailed engineering analysis of numerical instability in sharp notches, see:
-[Why High-Q IIR Notch Filters Become Unstable in Real DSP Systems](/high-q-iir-notch-filter-instability-and-fix/)
+[Why High-Q IIR Notch Filters Become Unstable in Real DSP Systems](/posts/high-q-iir-notch-filter-instability-and-fix/)
 
 ---
 
@@ -76,7 +76,8 @@ Sometimes no such solution exists.
 Knowing that early is as valuable as finding a working design.
 
 For a complete deterministic spectral characterization workflow, see:
-[Deterministic Spectral Analysis and Automated Filter Synthesis](/deterministic-spectral-analysis-and-automated-filter-synthesis/)
+[[Deterministic Spectral Analysis and Automated Filter Synthesis](/posts/deterministic-spectral-analysis-automated-filter-synthesis/)
+
 
 ---
 
