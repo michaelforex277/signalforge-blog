@@ -6,6 +6,8 @@ description: "Real-world DSP systems rarely suffer from a single narrowband tone
 slug: "multi-tone-harmonic-interference-dsp-suppression"
 ---
 
+<a href="https://signal-forge.app" class="home-link">← SignalForge Main Site</a>
+
 ## Introduction
 
 Many DSP tutorials present narrowband interference as a single isolated tone.

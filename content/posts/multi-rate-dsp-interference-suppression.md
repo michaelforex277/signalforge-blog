@@ -6,6 +6,8 @@ description: "Multi-rate DSP techniques allow efficient suppression of narrowban
 slug: "multi-rate-dsp-interference-suppression"
 ---
 
+<a href="https://signal-forge.app" class="home-link">← SignalForge Main Site</a>
+
 ## Introduction
 
 High-resolution filtering at full sampling rates can be computationally expensive.

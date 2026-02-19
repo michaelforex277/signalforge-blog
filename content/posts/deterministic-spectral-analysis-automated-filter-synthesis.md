@@ -6,6 +6,8 @@ description: "A deterministic, engineering-grade workflow for PSD/STFT-based ton
 slug: "deterministic-spectral-analysis-automated-filter-synthesis"
 ---
 
+<a href="https://signal-forge.app" class="home-link">← SignalForge Main Site</a>
+
 ## Introduction
 
 In real-world DSP systems—embedded sensing, instrumentation, audio processing, vibration monitoring, and RF-adjacent pipelines—engineers routinely face **narrowband tonal interference**, **harmonic spurs**, and **frequency-drifting noise components** contaminating time-domain measurements.

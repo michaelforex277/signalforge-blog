@@ -6,6 +6,8 @@ description: "Spectral leakage and window selection strongly influence tonal det
 slug: "spectral-leakage-windowing-effects-dsp"
 ---
 
+<a href="https://signal-forge.app" class="home-link">← SignalForge Main Site</a>
+
 ## Introduction
 
 FFT-based spectral analysis assumes signals are periodic within observation windows.

@@ -6,6 +6,8 @@ description: "Why visual frequency plots are insufficient for validating DSP fil
 slug: "engineering-metrics-for-dsp-filter-verification"
 ---
 
+<a href="https://signal-forge.app" class="home-link">← SignalForge Main Site</a>
+
 ## Introduction
 
 DSP filter design does not end when a frequency response looks acceptable.

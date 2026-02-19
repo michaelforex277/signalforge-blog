@@ -6,6 +6,8 @@ description: "Filters that are stable in floating-point simulations often become
 slug: "fixed-point-dsp-filter-stability"
 ---
 
+<a href="https://signal-forge.app" class="home-link">← SignalForge Main Site</a>
+
 ## Introduction
 
 Many DSP filters behave perfectly in floating-point simulations but fail after deployment in embedded systems.
