@@ -7,7 +7,7 @@ slug: "constraint-driven-dsp-filter-design"
 
 ---
 
-<a href="https://signal-forge.app" class="home-link">← SignalForge Main Site</a>
+<a href="https://signal-forge.app">← SignalForge Main Site</a>
 
 ## Introduction
 
