@@ -7,9 +7,9 @@ slug: "constraint-driven-dsp-filter-design"
 
 ---
 
-<a href="https://signal-forge.app">← SignalForge Main Site</a>
-
 ## Introduction
+
+[← SignalForge Main Site](https://signal-forge.app)
 
 Digital signal processing textbooks present filter design as a clean mathematical exercise. In real engineering systems, however, filtering is almost never about finding a theoretically optimal response.
 
