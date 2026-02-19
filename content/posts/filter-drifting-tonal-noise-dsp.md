@@ -6,8 +6,6 @@ description: "Why static notch filters fail on drifting tonal interference and h
 slug: "filter-drifting-tonal-noise-dsp"
 ---
 
-<a href="https://signal-forge.app" class="home-link">← SignalForge Main Site</a>
-
 ## Introduction
 
 Many real-world DSP systems suffer from narrowband interference that does not remain fixed in frequency.

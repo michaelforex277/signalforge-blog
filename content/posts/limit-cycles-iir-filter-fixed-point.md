@@ -6,8 +6,6 @@ description: "Limit cycles cause persistent oscillations in fixed-point IIR filt
 slug: "limit-cycles-iir-filter-fixed-point"
 ---
 
-<a href="https://signal-forge.app" class="home-link">← SignalForge Main Site</a>
-
 ## Introduction
 
 In fixed-point DSP systems, IIR filters may exhibit persistent oscillations even when the input signal is zero.

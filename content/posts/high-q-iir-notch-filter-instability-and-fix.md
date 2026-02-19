@@ -7,8 +7,6 @@ tags: ["IIR notch filter", "high Q instability", "DSP stability", "filter coeffi
 description: "High-Q IIR notch filters often become numerically unstable in real-world DSP systems. This article explains why instability happens and how deterministic coefficient synthesis prevents it."
 ---
 
-<a href="https://signal-forge.app" class="home-link">← SignalForge Main Site</a>
-
 ## Introduction
 
 IIR notch filters are widely used to suppress narrowband interference due to their efficiency and sharp frequency selectivity. However, engineers frequently encounter instability when pushing notch bandwidths extremely narrow—commonly referred to as high-Q designs.

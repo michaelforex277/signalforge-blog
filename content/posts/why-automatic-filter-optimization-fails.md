@@ -6,8 +6,6 @@ description: "Automatic filter optimization promises optimal spectral results, b
 slug: "why-automatic-filter-optimization-fails"
 ---
 
-<a href="https://signal-forge.app" class="home-link">← SignalForge Main Site</a>
-
 ## Introduction
 
 Modern DSP tools increasingly rely on automated optimization to design filters.

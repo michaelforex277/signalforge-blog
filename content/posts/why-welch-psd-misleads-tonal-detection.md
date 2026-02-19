@@ -6,8 +6,6 @@ description: "Welch PSD is widely used for spectral estimation, but averaging ef
 slug: "why-welch-psd-misleads-tonal-detection"
 ---
 
-<a href="https://signal-forge.app" class="home-link">← SignalForge Main Site</a>
-
 ## Introduction
 
 Power spectral density estimation using Welch’s method is a standard tool in digital signal processing.

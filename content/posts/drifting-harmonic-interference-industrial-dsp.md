@@ -6,8 +6,6 @@ description: "Industrial DSP systems frequently exhibit drifting harmonic interf
 slug: "drifting-harmonic-interference-industrial-dsp"
 ---
 
-<a href="https://signal-forge.app" class="home-link">← SignalForge Main Site</a>
-
 ## Introduction
 
 Industrial measurement systems operate under constantly changing physical conditions.

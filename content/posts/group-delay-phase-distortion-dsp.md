@@ -6,8 +6,6 @@ description: "Group delay and phase distortion strongly influence system behavio
 slug: "group-delay-phase-distortion-dsp"
 ---
 
-<a href="https://signal-forge.app" class="home-link">← SignalForge Main Site</a>
-
 ## Introduction
 
 Frequency magnitude plots rarely reveal phase behavior.

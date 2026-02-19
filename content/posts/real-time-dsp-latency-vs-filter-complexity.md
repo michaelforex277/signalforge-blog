@@ -6,8 +6,6 @@ description: "In real-time DSP systems, filter sharpness and complexity directly
 slug: "real-time-dsp-latency-vs-filter-complexity"
 ---
 
-<a href="https://signal-forge.app" class="home-link">← SignalForge Main Site</a>
-
 ## Introduction
 
 In real-time DSP systems, filter design is not purely a frequency-domain problem.
