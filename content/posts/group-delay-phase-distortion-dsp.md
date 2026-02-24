@@ -75,6 +75,8 @@ It directly influences system-level stability and performance.
 
 ---
 
+Back to Stability Pillar: [Embedded DSP Filter Stability](/posts/fixed-point-dsp-filter-stability/)
+
 ## Conclusion
 
 Practical DSP filter design requires evaluating both magnitude and phase characteristics under real constraints.

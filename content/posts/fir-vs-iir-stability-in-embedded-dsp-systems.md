@@ -127,6 +127,8 @@ Fixed-point behavior is detailed in:
 Limit cycle effects are discussed in:
 [Limit Cycles in IIR Filters Under Fixed-Point Arithmetic](/posts/limit-cycles-iir-filter-fixed-point/)
 
+Back to Stability Pillar: [Embedded DSP Filter Stability](/posts/fixed-point-dsp-filter-stability/)
+
 ## Conclusion
 
 Most real-world DSP failures blamed on “filter design” are actually numerical stability problems.

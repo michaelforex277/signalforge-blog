@@ -152,6 +152,8 @@ Robust DSP engineering balances spectral goals against deployability constraints
 
 ---
 
+Back to Stability Pillar: [Embedded DSP Filter Stability](/posts/fixed-point-dsp-filter-stability/)
+
 ## Conclusion
 
 Real-time DSP filter design is fundamentally a tradeoff problem.

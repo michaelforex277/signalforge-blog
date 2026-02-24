@@ -89,6 +89,8 @@ Blind optimization trades short-term spectral perfection for long-term system fr
 
 ---
 
+Back to Verification Pillar: [Engineering Metrics for DSP Filter Verification](/posts/engineering-metrics-for-dsp-filter-verification/)
+
 ## Conclusion
 
 Successful DSP filter design is not an unconstrained optimization problem.

@@ -181,6 +181,8 @@ Robust DSP systems rely on distribution-aware statistics — not simplistic mean
 
 ---
 
+Back to Verification Pillar: [Engineering Metrics for DSP Filter Verification](/posts/engineering-metrics-for-dsp-filter-verification/)
+
 ## Conclusion
 
 Average-based noise floor estimation fails in real-world signals due to impulsive and skewed behavior.

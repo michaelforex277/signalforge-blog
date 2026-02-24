@@ -119,6 +119,8 @@ Quantitative alternatives to visual inspection are explained in:
 Robust noise estimation methods are covered in:
 [Measuring Noise Floors Robustly Using Percentile Statistics](/posts/measuring-noise-floors-robustly-using-percentile-statistics/)
 
+Back to Verification Pillar: [Engineering Metrics for DSP Filter Verification](/posts/engineering-metrics-for-dsp-filter-verification/)
+
 ## Conclusion
 
 Noisy spectra routinely mislead even experienced engineers.

@@ -64,6 +64,8 @@ Design must explicitly account for them.
 
 ---
 
+Back to Stability Pillar: [Embedded DSP Filter Stability](/posts/fixed-point-dsp-filter-stability/)
+
 ## Conclusion
 
 Ignoring limit cycles leads to unstable embedded behavior.

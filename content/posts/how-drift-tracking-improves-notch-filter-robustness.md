@@ -207,6 +207,8 @@ High-Q instability risks are explained in:
 Engineering tradeoffs between adaptive and static design are covered in:
 [Adaptive Filtering vs Drift-Aware Static Design](/posts/adaptive-filtering-vs-drift-aware-static-design/)
 
+Back to Drift Pillar: [Drift-Aware Tonal Interference Suppression](/posts/filter-drifting-tonal-noise-dsp/)
+
 ## Conclusion
 
 Frequency drift is not a corner case — it is the norm in real DSP systems.

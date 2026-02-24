@@ -1,167 +1,205 @@
 ---
-title: "Fixed-Point DSP Filter Design: Why Floating-Point Stability Does Not Guarantee Deployment Stability"
-date: 2026-02-20
-tags: ["fixed-point DSP", "quantization", "IIR stability", "coefficient rounding", "embedded DSP", "filter deployment", "SignalForge"]
-description: "Filters that are stable in floating-point simulations often become unstable in fixed-point deployment. This article explains why and how to design numerically robust DSP filters for embedded systems."
+title: "Embedded DSP Filter Stability: FIR vs IIR, High-Q Risk, Fixed-Point Failure Modes"
+date: 2026-02-19
+tags: ["embedded DSP", "fixed-point", "IIR stability", "FIR", "high Q", "limit cycles", "numerical precision", "SignalForge"]
+description: "A practical engineering framework for stability in embedded DSP filters: mathematical vs numerical vs system stability, high-Q IIR risk, fixed-point limit cycles, FIR vs IIR tradeoffs, and deployable decision rules."
 slug: "fixed-point-dsp-filter-stability"
 ---
 
 ## Introduction
 
-Many DSP filters behave perfectly in floating-point simulations but fail after deployment in embedded systems.
+“Stability” in DSP is not a single concept.
 
-Symptoms include:
+A filter can be:
 
-- unexpected oscillation  
-- excessive ringing  
-- instability after coefficient quantization  
-- performance variation across hardware targets  
+- mathematically stable on paper
+- numerically unstable after quantization
+- system-unstable when integrated into a control loop
+- regression-unstable when small changes produce different outputs
 
-The root cause is not a flawed algorithm.
+This pillar provides an embedded, production-oriented framework for stability:
 
-It is numerical sensitivity introduced by fixed-point arithmetic.
-
-This article explains why floating-point stability does not guarantee deployment stability and outlines engineering practices for robust fixed-point DSP filter design.
-
-For background on numerical fragility in sharp filters, see:
-[Why High-Q IIR Notch Filters Become Unstable in Real DSP Systems](/posts/high-q-iir-notch-filter-instability-and-fix/)
-
----
-
-## Floating-Point Simulation Masks Quantization Effects
-
-In floating-point environments:
-
-- coefficients have high precision  
-- rounding error is minimal  
-- pole placement remains accurate  
-
-This often creates the illusion of stability.
-
-However, embedded systems frequently use:
-
-- 16-bit fixed-point  
-- Q-format arithmetic  
-- constrained dynamic range  
-
-Even small coefficient truncation can:
-
-- shift pole locations  
-- increase pole magnitude  
-- reduce stability margin  
-
-A filter stable in theory may become unstable in hardware.
+1. define stability layers
+2. understand dominant failure modes in IIR
+3. understand fixed-point-specific pathologies
+4. choose FIR vs IIR with engineering constraints
+5. validate stability quantitatively
 
 ---
 
-## How Quantization Moves Poles Toward Instability
+## The Three Layers of Stability
 
-In IIR structures:
+### 1) Mathematical Stability
+Classic definition: poles inside the unit circle.
 
-- poles determine stability  
-- small coefficient perturbations alter pole radius  
+Necessary, but not sufficient.
 
-When coefficients are quantized:
+### 2) Numerical Stability
+Finite precision moves poles, changes effective Q, and amplifies rounding error.
 
-- rounding introduces error  
-- poles move closer to or beyond the unit circle  
+This is where “stable in simulation” becomes “unstable in firmware”.
 
-High-Q filters are especially vulnerable.
-
-For broader constraint philosophy, see:
-[Constraint-Driven DSP Filter Design](/posts/constraint-driven-dsp-filter-design/)
+### 3) System Stability
+Even a stable filter can destabilize a closed-loop system via delay, phase distortion, or interaction with downstream logic.
 
 ---
 
-## Dynamic Range and Overflow Effects
+## Why High-Q IIR Notches Are a Production Risk
 
-Fixed-point systems must manage:
+High Q implies poles near the unit circle.
 
-- accumulator overflow  
-- saturation behavior  
-- scaling strategy  
+This increases sensitivity to coefficient rounding.
 
-Improper scaling can cause:
+Symptoms in production:
 
-- limit cycles  
-- distortion  
-- persistent oscillations  
+- ringing / long transient decay
+- oscillation under small numerical perturbation
+- frequency response drift between builds
+- “it worked in Python but fails on MCU”
 
-Even if pole placement remains theoretically stable, arithmetic overflow may break real-world behavior.
-
----
-
-## Limit Cycles and Finite Word-Length Effects
-
-Unlike floating-point arithmetic, fixed-point systems exhibit:
-
-- limit cycle oscillations  
-- zero-input oscillatory behavior  
-- quantization noise feedback  
-
-These effects cannot be observed in ideal floating-point simulations.
-
-Engineering-grade verification must include:
-
-- zero-input testing  
-- impulse decay checks  
-- worst-case dynamic range analysis  
+High-Q failure mechanisms and guardrails are detailed here:  
+[Why High-Q IIR Notch Filters Become Unstable in Real DSP Systems (And How to Fix It)](/posts/high-q-iir-notch-filter-instability-and-fix/)
 
 ---
 
-## Stability Margins Must Be Explicit
+## Fixed-Point Failure Mode: Limit Cycles
 
-Robust fixed-point filter design requires:
+Fixed-point introduces behaviors that do not exist in floating-point:
 
-- bounded pole radius constraints  
-- conservative Q limits  
-- normalized coefficient scaling  
-- post-quantization stability verification  
+- quantization of state variables
+- rounding of feedback paths
+- saturation / wrap-around behavior
 
-Designing “as sharp as possible” is incompatible with embedded reliability.
+Limit cycles are self-sustaining oscillations caused by quantized feedback.
 
-For quantitative verification philosophy, see:
-[Engineering Metrics for Verifying DSP Filter Performance in Real Systems](/posts/engineering-metrics-for-dsp-filter-verification/)
+A focused engineering explanation is here:  
+[Limit Cycles in IIR Filters Under Fixed-Point Arithmetic](/posts/limit-cycles-iir-filter-fixed-point/)
 
----
+The practical takeaway:
 
-## Deterministic Deployment-Oriented Design
-
-A deployment-aware workflow:
-
-1. Characterizes interference deterministically  
-2. Synthesizes filters under explicit stability margins  
-3. Simulates quantized coefficients  
-4. Verifies post-quantization performance  
-5. Rejects fragile designs automatically  
-
-This transforms DSP filter deployment from trial-and-error to controlled engineering practice.
+> If you deploy IIR in fixed-point, you must treat limit cycles as a design constraint, not a rare bug.
 
 ---
 
-## Engineering Takeaway
+## Structure Matters: Why Implementation Form Changes Risk
 
-Floating-point stability is a necessary condition.
+Two mathematically equivalent IIRs can behave very differently numerically.
 
-It is not a sufficient condition.
+Practical guardrails:
 
-Robust fixed-point DSP design requires:
-
-- quantization-aware synthesis  
-- conservative stability margins  
-- explicit verification under finite precision  
-
-Without these safeguards, mathematically correct filters may fail in deployment.
+- prefer SOS (biquad cascade) over high-order direct forms
+- normalize coefficients consistently (a0 = 1)
+- scale to avoid internal overflow in fixed-point
+- verify impulse decay and stability margins after quantization
 
 ---
 
-Numerical sensitivity under high-Q design is analyzed in:
-[Why High-Q IIR Notch Filters Become Unstable](/posts/high-q-iir-notch-filter-instability-and-fix/)
+## FIR vs IIR in Embedded Systems
+
+FIR and IIR are not “better vs worse”.
+
+They are different stability and cost profiles.
+
+A dedicated comparison is here:  
+[FIR vs IIR Stability in Embedded DSP Systems](/posts/fir-vs-iir-stability-in-embedded-dsp-systems/)
+
+### FIR Strengths
+- inherently stable (no feedback)
+- predictable under quantization
+- linear-phase possible (if symmetric)
+
+### FIR Costs
+- more taps → more CPU
+- more taps → more delay/latency
+- aggressive specs may be expensive
+
+### IIR Strengths
+- efficient sharp selectivity (e.g., notches)
+- fewer operations for similar magnitude response
+- good for narrowband suppression
+
+### IIR Risks
+- numerical fragility under high Q
+- fixed-point limit cycles
+- sensitivity to coefficient rounding and scaling
+
+---
+
+## Phase, Delay, and System-Level Stability
+
+Even “stable” filters can cause system instability by changing:
+
+- group delay
+- phase margin
+- transient response shape
+
+Group delay and phase distortion tradeoffs are covered here:  
+[Group Delay and Phase Distortion in Real DSP Pipelines](/posts/group-delay-phase-distortion-dsp/)
+
+Latency vs complexity constraints are covered here:  
+[Real-Time DSP: Latency vs Filter Complexity](/posts/real-time-dsp-latency-vs-filter-complexity/)
+
+---
+
+## A Deployable Decision Matrix (Engineer-Friendly)
+
+Use this as a default decision guide:
+
+### Choose IIR Notch (SOS) when:
+- interference is narrowband tonal
+- drift envelope is known and bounded
+- you can enforce bounded Q and stability margins
+- you can validate coefficients post-quantization
+
+### Choose FIR when:
+- phase/shape preservation matters
+- fixed-point risk is high
+- you can afford taps/latency
+- you need predictable behavior across builds
+
+### Choose Hybrid when:
+- use IIR notches for tonals
+- use FIR for broadband shaping / passband protection
+- verify as a combined system
+
+---
+
+## Stability Verification Checklist (Minimal, Effective)
+
+A stability-safe pipeline should verify:
+
+- impulse response decay (no sustained ringing beyond expectation)
+- coefficient sanity (margins away from pathological extremes)
+- frequency response robustness (small perturbations do not flip behavior)
+- fixed-point simulation (if target is fixed-point)
+- regression repeatability (reruns produce consistent results)
+
+Verification metrics as an engineering discipline are covered here:  
+[Engineering Metrics for DSP Filter Verification](/posts/engineering-metrics-for-dsp-filter-verification/)
+
+---
+
+## Series Map — Stability Pillar and Supporting Articles
+
+- **Stability Pillar (this page):** embedded stability framework and decision matrix  
+- [Why High-Q IIR Notch Filters Become Unstable (And How to Fix It)](/posts/high-q-iir-notch-filter-instability-and-fix/)  
+- [Limit Cycles in IIR Filters Under Fixed-Point Arithmetic](/posts/limit-cycles-iir-filter-fixed-point/)  
+- [FIR vs IIR Stability in Embedded DSP Systems](/posts/fir-vs-iir-stability-in-embedded-dsp-systems/)  
+- [Group Delay and Phase Distortion in Real DSP Pipelines](/posts/group-delay-phase-distortion-dsp/)  
+- [Real-Time DSP: Latency vs Filter Complexity](/posts/real-time-dsp-latency-vs-filter-complexity/)  
+
+---
 
 ## Conclusion
 
-Deployment stability depends on numerical robustness, not just theoretical design.
+Embedded DSP stability is not a checkbox.
 
-By integrating fixed-point awareness into synthesis and verification workflows, engineers ensure that filters behave consistently from simulation to embedded hardware.
+It is a system property that emerges from:
 
-Reliable DSP systems are built through deterministic engineering discipline, not optimistic assumptions.
+- architecture choices (FIR vs IIR)
+- numerical constraints (Q bounds, quantization, scaling)
+- implementation structure (SOS, normalization)
+- system integration effects (delay, phase margin)
+- verification discipline (quantitative, repeatable checks)
+
+This is how filters become **deployable** instead of “works in a notebook”.

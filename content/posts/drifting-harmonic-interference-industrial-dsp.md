@@ -93,6 +93,8 @@ Multi-tone detection stability is discussed in:
 Robust notch design principles are covered in:
 [FIR vs IIR Stability in Embedded DSP Systems](/posts/fir-vs-iir-stability-in-embedded-dsp-systems/)
 
+Back to Drift Pillar: [Drift-Aware Tonal Interference Suppression](/posts/filter-drifting-tonal-noise-dsp/)
+
 ## Conclusion
 
 By treating interference as a dynamic multi-tone system, engineers achieve reliable suppression in real industrial environments.

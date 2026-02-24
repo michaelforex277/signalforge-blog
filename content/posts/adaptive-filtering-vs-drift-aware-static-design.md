@@ -188,6 +188,8 @@ Drift-aware static design is slightly conservative — but robust.
 
 ---
 
+Back to Drift Pillar: [Drift-Aware Tonal Interference Suppression](/posts/filter-drifting-tonal-noise-dsp/)
+
 ## Conclusion
 
 Many adaptive filtering deployments fail not due to math errors, but due to engineering fragility.

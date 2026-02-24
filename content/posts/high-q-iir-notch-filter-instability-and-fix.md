@@ -151,6 +151,8 @@ Broader over-optimization risks are discussed in:
 Numerical precision constraints are covered in:
 [FIR vs IIR Stability in Embedded DSP Systems](/posts/fir-vs-iir-stability-in-embedded-dsp-systems/)
 
+Back to Stability Pillar: [Embedded DSP Filter Stability](/posts/fixed-point-dsp-filter-stability/)
+
 ## Conclusion
 
 Sharp filters require engineering discipline, not brute-force optimization.

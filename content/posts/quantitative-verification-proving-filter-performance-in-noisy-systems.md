@@ -187,6 +187,8 @@ Engineering metric frameworks are further detailed in:
 Deterministic pipeline architecture is discussed in:
 [Designing DSP Pipelines for Deterministic Outputs](/posts/designing-dsp-pipelines-for-deterministic-outputs/)
 
+Back to Verification Pillar: [Engineering Metrics for DSP Filter Verification](/posts/engineering-metrics-for-dsp-filter-verification/)
+
 ## Conclusion
 
 Effective DSP filtering is not about making signals “look cleaner.”

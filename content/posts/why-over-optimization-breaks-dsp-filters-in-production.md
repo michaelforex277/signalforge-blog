@@ -171,6 +171,8 @@ It is reliable performance under real conditions.
 Quantitative validation practices are covered in:
 [Quantitative Verification: Proving Filter Performance in Noisy DSP Systems](/posts/quantitative-verification-proving-filter-performance-in-noisy-systems/)
 
+Back to Verification Pillar: [Engineering Metrics for DSP Filter Verification](/posts/engineering-metrics-for-dsp-filter-verification/)
+
 ## Conclusion
 
 Over-optimized DSP filters sit on numerical cliffs.
