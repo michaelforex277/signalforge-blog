@@ -1,6 +1,6 @@
 ---
 title: "Quantitative Verification: Proving Filter Performance in Noisy DSP Systems"
-date: 2026-02-26
+date: 2026-02-23
 tags: ["DSP verification", "filter performance", "quantitative metrics", "PSD analysis", "engineering validation", "SignalForge"]
 description: "An engineering framework for quantitatively verifying filter performance in noisy environments using measurable suppression, noise floor statistics, and stability evidence rather than visual inspection."
 slug: "quantitative-verification-proving-filter-performance-in-noisy-systems"

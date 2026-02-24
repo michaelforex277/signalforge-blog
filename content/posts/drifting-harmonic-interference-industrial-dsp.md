@@ -1,6 +1,6 @@
 ---
 title: "Drifting Harmonic Interference in Industrial DSP Systems"
-date: 2026-02-25
+date: 2026-02-23
 tags: ["industrial DSP", "harmonic interference", "drifting frequency", "vibration analysis", "spectral tracking", "SignalForge"]
 description: "Industrial DSP systems frequently exhibit drifting harmonic interference driven by mechanical and electrical processes. This article explains how to characterize and suppress these complex patterns robustly."
 slug: "drifting-harmonic-interference-industrial-dsp"

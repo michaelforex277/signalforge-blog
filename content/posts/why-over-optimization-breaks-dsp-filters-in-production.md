@@ -1,6 +1,6 @@
 ---
 title: "Why Over-Optimization Breaks DSP Filters in Production Systems"
-date: 2026-02-27
+date: 2026-02-23
 tags: ["DSP optimization", "filter instability", "numerical precision", "overfitting", "engineering robustness", "SignalForge"]
 description: "An engineering analysis of why aggressively optimized DSP filters often fail in real-world systems, explaining numerical sensitivity, instability, and robustness tradeoffs."
 slug: "why-over-optimization-breaks-dsp-filters-in-production"

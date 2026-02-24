@@ -1,6 +1,6 @@
 ---
 title: "Measuring Noise Floors Robustly Using Percentile Statistics in DSP Systems"
-date: 2026-02-28
+date: 2026-02-23
 tags: ["noise floor", "percentile statistics", "PSD analysis", "robust estimation", "DSP verification", "SignalForge"]
 description: "An engineering explanation of why average-based noise floor estimates fail in real signals and how percentile statistics provide stable, robust measurements for DSP verification and filter design."
 slug: "measuring-noise-floors-robustly-using-percentile-statistics"

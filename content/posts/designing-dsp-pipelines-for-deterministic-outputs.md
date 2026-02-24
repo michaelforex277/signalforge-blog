@@ -1,7 +1,7 @@
 
 ---
 title: "Designing Deterministic Low-SNR DSP Detection Architectures for Real-World Systems"
-date: 2026-03-03
+date: 2026-02-23
 tags: ["DSP pipeline design", "low SNR detection", "deterministic systems", "signal processing verification", "engineering robustness", "SignalForge"]
 description: "A complete engineering architecture for building deterministic DSP detection pipelines that remain stable under noise, drift, estimator variance, and real-world uncertainty."
 slug: "designing-dsp-pipelines-for-deterministic-outputs"

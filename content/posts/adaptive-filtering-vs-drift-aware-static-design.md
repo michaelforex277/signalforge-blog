@@ -1,6 +1,6 @@
 ---
 title: "Adaptive Filtering vs Drift-Aware Static Design in Real DSP Systems"
-date: 2026-02-25
+date: 2026-02-23
 tags: ["adaptive filtering", "notch filter", "frequency drift", "robust DSP", "STFT tracking", "SignalForge"]
 description: "A practical engineering comparison between adaptive filtering approaches and drift-aware static notch design, explaining stability, complexity, and real-world robustness tradeoffs."
 slug: "adaptive-filtering-vs-drift-aware-static-design"

@@ -1,6 +1,6 @@
 ---
 title: "Why Visual Spectra Lie in Noisy Environments"
-date: 2026-03-02
+date: 2026-02-23
 tags: ["PSD analysis", "spectral visualization", "noise variance", "DSP diagnostics", "signal interpretation", "SignalForge"]
 description: "An engineering explanation of why frequency-domain plots often mislead engineers in noisy systems and how estimator variance and perception bias distort spectral interpretation."
 slug: "why-visual-spectra-lie-in-noisy-environments"

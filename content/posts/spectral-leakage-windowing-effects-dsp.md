@@ -1,6 +1,6 @@
 ---
 title: "Spectral Leakage and Windowing Effects in Real DSP Measurements"
-date: 2026-02-24
+date: 2026-02-23
 tags: ["spectral leakage", "windowing", "FFT analysis", "PSD estimation", "DSP measurement", "SignalForge"]
 description: "Spectral leakage and window selection strongly influence tonal detection in real DSP systems. This article explains how windowing artifacts distort spectra and mislead interference analysis."
 slug: "spectral-leakage-windowing-effects-dsp"

@@ -1,6 +1,6 @@
 ---
 title: "How Presence Metrics Prevent False Tonal Detection in Noisy Spectral Analysis"
-date: 2026-02-24
+date: 2026-02-23
 tags: ["tonal detection", "presence metrics", "STFT analysis", "false peaks", "DSP verification", "SignalForge"]
 description: "An engineering explanation of how temporal presence metrics eliminate false tonal detection caused by PSD noise ripple and estimator variance in low-SNR DSP pipelines."
 slug: "how-presence-metrics-prevent-false-tonal-detection"

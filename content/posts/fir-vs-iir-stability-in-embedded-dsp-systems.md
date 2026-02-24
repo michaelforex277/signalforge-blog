@@ -1,6 +1,6 @@
 ---
 title: "FIR vs IIR Stability in Embedded DSP Systems: Engineering Tradeoffs Explained"
-date: 2026-03-01
+date: 2026-02-23
 tags: ["FIR filters", "IIR filters", "DSP stability", "embedded systems", "numerical precision", "SignalForge"]
 description: "A practical engineering comparison of FIR and IIR filter stability in embedded DSP systems, explaining numerical behavior, robustness, and real-world deployment tradeoffs."
 slug: "fir-vs-iir-stability-in-embedded-dsp-systems"

@@ -1,6 +1,6 @@
 ---
 title: "How Drift Tracking Improves Notch Filter Robustness in Real DSP Systems"
-date: 2026-02-24
+date: 2026-02-23
 tags: ["frequency drift", "notch filter", "STFT tracking", "robust DSP", "tonal interference", "SignalForge"]
 description: "An engineering explanation of why frequency drift breaks narrow notch filters and how STFT-based drift tracking enables robust interference suppression in real-world DSP pipelines."
 slug: "how-drift-tracking-improves-notch-filter-robustness"
