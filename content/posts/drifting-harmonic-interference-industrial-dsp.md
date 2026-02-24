@@ -87,6 +87,12 @@ Robust suppression requires drift-aware harmonic characterization rather than st
 
 ---
 
+Multi-tone detection stability is discussed in:
+[How Presence Metrics Prevent False Tonal Detection](/posts/how-presence-metrics-prevent-false-tonal-detection/)
+
+Robust notch design principles are covered in:
+[FIR vs IIR Stability in Embedded DSP Systems](/posts/fir-vs-iir-stability-in-embedded-dsp-systems/)
+
 ## Conclusion
 
 By treating interference as a dynamic multi-tone system, engineers achieve reliable suppression in real industrial environments.

@@ -174,6 +174,12 @@ Once drift behavior is explicitly characterized, suppression becomes straightfor
 
 ---
 
+Measured drift envelope sizing is detailed in:
+[How Drift Tracking Improves Notch Filter Robustness](/posts/how-drift-tracking-improves-notch-filter-robustness/)
+
+Adaptive vs static strategies are compared in:
+[Adaptive Filtering vs Drift-Aware Static Design](/posts/adaptive-filtering-vs-drift-aware-static-design/)
+
 ## Conclusion
 
 Drifting tonal noise is a spectral characterization problem, not a filter sharpness problem.

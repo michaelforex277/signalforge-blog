@@ -149,6 +149,9 @@ Visual inspection alone cannot guarantee system-level performance.
 
 ---
 
+Robust noise statistics are explained in:
+[Measuring Noise Floors Robustly Using Percentile Statistics](/posts/measuring-noise-floors-robustly-using-percentile-statistics/)
+
 ## Conclusion
 
 DSP filtering is an engineering system, not a visual exercise.

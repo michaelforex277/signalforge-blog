@@ -155,6 +155,9 @@ Without these safeguards, mathematically correct filters may fail in deployment.
 
 ---
 
+Numerical sensitivity under high-Q design is analyzed in:
+[Why High-Q IIR Notch Filters Become Unstable](/posts/high-q-iir-notch-filter-instability-and-fix/)
+
 ## Conclusion
 
 Deployment stability depends on numerical robustness, not just theoretical design.

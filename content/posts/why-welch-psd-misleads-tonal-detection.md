@@ -167,6 +167,12 @@ Robust DSP pipelines must combine PSD with temporal spectral analysis and determ
 
 ---
 
+Estimator variance issues are further discussed in:
+[Why PSD Peak Detection Fails in Low SNR Signals](/posts/why-psd-peak-detection-fails-in-low-snr-signals/)
+
+Time-frequency validation approaches are covered in:
+[How STFT Cross-Validation Improves Low-SNR Tone Detection](/posts/how-stft-cross-validation-improves-low-snr-tone-detection/)
+
 ## Conclusion
 
 Welch PSD remains a powerful spectral estimation tool.

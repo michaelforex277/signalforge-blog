@@ -145,6 +145,12 @@ By enforcing deterministic synthesis constraints and quantitative stability chec
 
 ---
 
+Broader over-optimization risks are discussed in:
+[Why Over-Optimization Breaks DSP Filters in Production](/posts/why-over-optimization-breaks-dsp-filters-in-production/)
+
+Numerical precision constraints are covered in:
+[FIR vs IIR Stability in Embedded DSP Systems](/posts/fir-vs-iir-stability-in-embedded-dsp-systems/)
+
 ## Conclusion
 
 Sharp filters require engineering discipline, not brute-force optimization.

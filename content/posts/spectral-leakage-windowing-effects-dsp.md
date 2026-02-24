@@ -90,6 +90,12 @@ Ignoring leakage effects leads to false conclusions about interference structure
 
 ---
 
+Leakage-driven false peaks are analyzed in:
+[Why Visual Spectra Lie in Noisy Environments](/posts/why-visual-spectra-lie-in-noisy-environments/)
+
+Detection robustness strategies are discussed in:
+[How Presence Metrics Prevent False Tonal Detection](/posts/how-presence-metrics-prevent-false-tonal-detection/)
+
 ## Conclusion
 
 Understanding spectral leakage and window artifacts is essential for reliable DSP measurement and filtering decisions.
