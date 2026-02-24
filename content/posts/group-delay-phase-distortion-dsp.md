@@ -1,6 +1,6 @@
 ---
 title: "Group Delay and Phase Distortion in Practical DSP Filter Design"
-date: 2026-02-27
+date: 2026-02-23
 tags: ["group delay", "phase distortion", "IIR vs FIR", "real-time DSP", "filter design", "SignalForge"]
 description: "Group delay and phase distortion strongly influence system behavior in real-time DSP applications. This article explains their impact and engineering tradeoffs."
 slug: "group-delay-phase-distortion-dsp"
